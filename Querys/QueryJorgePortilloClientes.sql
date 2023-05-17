@@ -20,6 +20,21 @@ insert into LineaCredito(Cliente, Credito_aprobado, Saldo_Pendiente, Ultimo_Pago
 
 CREATE table Factura(
 	Cliente int,
-	
-)
+	Producto_v int, 
+	Total int,
+	MetodoPago varchar(100),
+	CONSTRAINT fk_c_ic FOREIGN KEY (Cliente) REFERENCES Clientes(ID),
+	CONSTRAINT fkp_ip FOREIGN KEY (Producto_v) REFERENCES Producto(Id_Producto),
+);
 
+insert into factura(Cliente, Producto, Total, MetodoPago) values 
+(120, 301, 300, Linea de credito),
+(121, 302, 300, Linea de credito),
+(122, 303, 300, Linea de credito),
+(123, 304, 300, Linea de credito),
+(124, 305, 300, Linea de credito),
+(125, 306, 300, Linea de credito),
+(126, 307, 300, Linea de credito),
+(127, 308, 300, Linea de credito),
+(128, 309, 300, Linea de credito),
+(129, 310, 300, Linea de credito),

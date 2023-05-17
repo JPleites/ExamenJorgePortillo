@@ -87,3 +87,4 @@ CREATE table Bodega(
 	Ventas_por_semana int,
 	constraint fk_ib_ip foreign key (Id_Producto) references Producto(Id_Producto)
 );
+
